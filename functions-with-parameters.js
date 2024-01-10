@@ -9,13 +9,23 @@ function add(a, b) {
 }
 
 const result = add(1, 4);
+const result2 = add(2, 5);
 console.log(result);
+console.log(result2);
+
 
 /* Opdracht 1 */
 // Schrijf een functie genaamd greeter, die een naam verwacht en een groet teruggeeft
 // ---- Verwachte uitkomsten:
 // greeter("Jan") geeft "Hoi Jan!"
 // greeter("Kees") geeft "Hoi Kees!"
+
+function greeter (name) {
+  return `Hoi ${name}!`;
+}
+
+console.log(greeter("Jan"));
+console.log(greeter("Kees"));
 
 
 
@@ -26,6 +36,13 @@ console.log(result);
 // minutesToSeconds(3) geeft 180
 // minutesToSeconds(23) geeft 1380
 
+function minutesToSeconds(min) {
+  return `minutesToSeconds geeft ${min * 60}`
+}
+
+console.log(minutesToSeconds(1));
+console.log(minutesToSeconds(3));
+console.log(minutesToSeconds(23));
 
 
 /* Opdracht 3 */
@@ -36,6 +53,12 @@ console.log(result);
 // merge("zoet", "sappig") geeft "zoetsappig"
 
 
+function merge(string1, string2) {
+    return string1 + string2;
+}
+
+console.log(merge("abra","cadabra"));
+console.log(merge("zoet","sappig"));
 
 
 /* Opdracht  4 */
@@ -44,6 +67,12 @@ console.log(result);
 // calculateDogYears(6) geeft "Jouw hond is 42 jaar oud in mensenjaren."
 // calculateDogYears(2) geeft "Jouw hond is 14 jaar oud in mensenjaren."
 
+function calculateDogYears(dogAge) {
+  return dogAge * 7;
+}
+
+console.log(`Jouw hond is ${calculateDogYears(6)} jaar oud in mensenjaren`)
+console.log(`Jouw hond is ${calculateDogYears(2)} jaar oud in mensenjaren`)
 
 
 /* Opdracht 5 */
@@ -54,7 +83,13 @@ console.log(result);
 // wrapper("beep", "_") geeft "_beep_"
 // wrapper("kaas", "Q") geeft "QkaasQ"
 
+function wrapper(word, character) {
+  return character + word + character;
+}
 
+console.log(`*`,`bril`,`*`)
+console.log(`_`,`beep`,`_`)
+console.log(`Q`,`kaas`,`Q`)
 
 /* Bonus opdracht  */
 // Schrijf een functie genaamd createDetailString, die een object met de properties firstName, lastName en profession verwacht en een zin teruggeeft
@@ -62,4 +97,9 @@ console.log(result);
 // createDetailString({ firstName: 'Jan', lastName: 'Jansen', profession: 'docent'}) geeft "Het beroep vam Jan Jansen is docent."
 // createDetailString({ firstName: 'Kees', lastName: 'Klaasen', profession: 'brandweerman'}) geeft "Het beroep vam Kees Klaasen is brandweerman."
 
+function createDetailString(firstName, lastName, profession) {
+  return `Het beroep van ${firstName} ${lastName} is ${profession}`
+}
 
+console.log(createDetailString("Jan","Jansen","docent"))
+console.log(createDetailString("Kees","Klaassen","brandweerman"))
